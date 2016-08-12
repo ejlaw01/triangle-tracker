@@ -12,19 +12,19 @@ $(document).ready(function() {
     if (s1 === s2 && s2 === s3 && s1 === s3) {
       alert("It is an EQUILATERAL triangle.");
 // not a triangle
-    } else if (s1 + s2 <= s3) {
+    } else if ((s1 + s2 <= s3) || (s2 + s3 <= s1) || (s1 + s3 <= s2)) {
         alert("That's not a triangle.");
-    }  else if (s2 + s3 <= s1) {
-        alert("That's not a triangle.");
-    }  else if (s1 + s3 <= s2) {
-        alert("That's not a triangle.");
+    // }  else if (s2 + s3 <= s1) {
+    //     alert("That's not a triangle.");
+    // }  else if (s1 + s3 <= s2) {
+    //     alert("That's not a triangle.");
 // 2 sides equal
-    } else if (s1 === s2 && s2 !== s3) {
+    } else if ((s1 === s2 && s2 !== s3) || (s2 === s3 && s2!== s1) || (s1 === s3 && s3!== s2)) {
         alert("It is an ISOSCELES triangle.");
-    } else if (s2 === s3 && s2!== s1) {
-        alert("It is an ISOSCELES triangle.");
-    } else if (s1 === s3 && s3!== s2) {
-        alert("It is an ISOSCELES triangle.");
+    // } else if (s2 === s3 && s2!== s1) {
+    //     alert("It is an ISOSCELES triangle.");
+    // } else if (s1 === s3 && s3!== s2) {
+    //     alert("It is an ISOSCELES triangle.");
 // no sides equal
     } else if (s1 !== s2 && s2 !== s3 && s1 !== s3) {
         alert("It is an SCALENE triangle.");
